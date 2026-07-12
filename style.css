@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Nastaliq Urdu', sans-serif;
+  background: #f0fdf4;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 { color: #15803d; font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+p { color: #4b5563; font-size: 16px; margin-bottom: 25px; }
+
+#question {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+#answer-box {
+  background: #dcfce7;
+  border: 2px dashed #15803d;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  min-height: 60px;
+  display: none;
+}
+
+#answer {
+  font-size: 18px;
+  color: #15803d;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+button {
+  padding: 12px 30px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Noto Nastaliq Urdu', sans-serif;
+  margin: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover { background: #15803d; transform: scale(1.05); }
+
+#score {
+  font-size: 18px;
+  font-weight: bold;
+  color: #15803d;
+  margin-top: 20px;
+  padding: 10px;
+  background: #dcfce7;
+  border-radius: 8px;
+}
+
+.watermark {
+  margin-top: 30px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #15803d;
+  opacity: 0.9;
+  border-top: 2px dashed #15803d;
+}
+
+body::before {
+  content: "M Ijaz GHS 124NB";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 50px;
+  color: rgba(21, 128, 61, 0.06);
+  z-index: -1;
+  font-weight: bold;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+ .container { padding: 20px 15px; }
+  h1 { font-size: 24px; }
+  #question { font-size: 18px; }
+  button { font-size: 15px; padding: 10px 20px; }
+}
